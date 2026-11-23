@@ -9701,6 +9701,10 @@ function reset_cur_game() {
 	}
 
 	stopGame();
+
+	// Reiniciar también el sistema de música personalizado
+    resetMusicOnGameRestart();
+	
 	clearGameData();
 
 	if (isPlayerEmbeddedInEditor && onGameReset != null) {
@@ -13810,6 +13814,30 @@ stefanoAudio.addEventListener("ended", function() {
         1500
     );
 });
+
+// Reiniciar todos los audios al reiniciar el juego
+function resetMusicOnGameRestart() {
+
+    // Restablecer el estado del sistema
+    finalMusicActive = false;
+    lastRoom = null;
+    audioStarted = false;
+
+    // Cancelar cualquier transición en curso
+    if (fadeInterval) {
+        clearInterval(fadeInterval);
+        fadeInterval = null;
+    }
+
+    transitionId++;
+
+    // Detener y reiniciar todos los audios
+    allAudios.forEach(audio => {
+        audio.pause();
+        audio.currentTime = 0;
+        audio.volume = 0;
+    });
+}
 </script>
 </body>
 </html>
