@@ -9702,10 +9702,12 @@ function reset_cur_game() {
 
 	stopGame();
 
+	
+	clearGameData();
+
 	// Reiniciar también el sistema de música personalizado
     resetMusicOnGameRestart();
 	
-	clearGameData();
 
 	if (isPlayerEmbeddedInEditor && onGameReset != null) {
 		onGameReset();
