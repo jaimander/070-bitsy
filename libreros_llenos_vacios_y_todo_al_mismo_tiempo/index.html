@@ -10053,7 +10053,10 @@ function movePlayer(direction, isFirstMove) {
 			blipId = item[itm.id].blip;
 		}
 
+		playCollectAudio(itm.id);
+		
 		startItemDialog(itm.id, function() {
+			
 			// remove item from room
 			room[itemRoom].items.splice(itmIndex, 1);
 
@@ -10070,7 +10073,7 @@ function movePlayer(direction, isFirstMove) {
 				onInventoryChanged(itm.id);
 			}
 
-			playCollectAudio(itm.id);
+			
 		});
 	}
 
