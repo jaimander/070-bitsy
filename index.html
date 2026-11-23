@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Galería de proyectos interactivos y narrativas digitales."
+    />
+    <title>Proyectos | Narrativas digitales</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&display=swap");
+      @import url('https://fonts.googleapis.com/css2?family=Bytesized&display=swap');
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Cascadia Mono", "JetBrains Mono", monospace;
+        background: #f5f5f0;
+        color: #222;
+        padding: 40px;
+      }
+
+      header {
+        max-width: 1200px;
+        margin: 0 auto 60px;
+        border-bottom: 1px solid #222;
+        padding-bottom: 25px;
+      }
+
+      header h1 {
+        font-size: clamp(2rem, 5vw, 4rem);
+        font-weight: 500;
+        margin-bottom: 12px;
+        color: #ff4141;
+       /* font-family: "Bytesized", monospace;*/
+      }
+
+      header p {
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #666;
+        max-width: 700px;
+      }
+
+      main {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 40px;
+      }
+
+      .work {
+        display: flex;
+        flex-direction: column;
+        color: inherit;
+        text-decoration: none;
+      }
+
+     .work h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    min-height: 2.4em;
+}
+
+     .work-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 18px;
+    min-height: 3.2em;
+}
+
+     .work-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: #ddd;
+    margin-bottom: 18px;
+    flex-shrink: 0;
+       border-style: solid;
+        border-width: 1px;
+        border-color: black;
+       
+}
+
+      .work-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.4s ease;
+     
+      }
+
+      .work:hover .work-image img {
+        transform: scale(1.04);
+        
+      }
+
+      .credits {
+        font-size: 0.8rem;
+        line-height: 1.8;
+        color: #666;
+      }
+
+      .credits strong {
+        font-weight: 600;
+        color: #222;
+      }
+
+      .visit {
+        display: inline-block;
+        margin-top: 18px;
+        font-size: 0.85rem;
+       
+        padding-bottom: 4px;
+        text-decoration: none;
+        color: #ff4141;
+       /* border-bottom-color: #ff4141;*/
+      }
+
+      a {
+        color: #ff4141;
+        text-decoration: none;
+      }
+
+      footer {
+        max-width: 1200px;
+        margin: 80px auto 0;
+        padding-top: 20px;
+        border-top: 1px solid #ccc;
+        color: #888;
+        font-size: 0.8rem;
+      }
+
+      @media (max-width: 700px) {
+        body {
+          padding: 24px;
+        }
+
+        .gallery {
+          grid-template-columns: 1fr;
+          gap: 50px;
+        }
+
+        header {
+          margin-bottom: 40px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Reportajes de 070 en forma de videojuego</h1>
+      <p>
+        <b>Videojuegos</b> realizados en el curso "Videojuego y Narrativa
+        Interactiva" (prof. Jaime Rodríguez). <br />
+        <br /><b>Música</b> realizada en el curso "Composición para Videojuegos"
+        (prof. Sergio Gutierrez).
+      </p>
+    </header>
+
+    <main>
+      <section class="gallery">
+        <!-- PROYECTO 1 -->
+        <article class="work">
+          <h2>Libreros llenos, vacíos y todo al mismo tiempo</h2>
+
+          <p class="work-description">
+            Basado en el artículo de 070 "El costo de cerrar una librería
+            independiente".
+          </p>
+
+          <a href="./libreros_llenos_vacios_y_todo_al_mismo_tiempo/index.html">
+            <div class="work-image" style="border-color: #f27b9b">
+              <img
+                src="./assets/libreros.png"
+                alt="Libreros llenos, vacíos y todo al mismo tiempo"
+              />
+            </div>
+          </a>
+
+          <div class="credits">
+            <p><strong>Diseño y desarrollo:</strong> Diego Padilla</p>
+            <p><strong>Composición sonora:</strong> Melissa Ramirez</p>
+          </div>
+
+          <a
+            class="visit"
+            href="./libreros_llenos_vacios_y_todo_al_mismo_tiempo/index.html"
+          >
+            Jugar ↗
+          </a>
+        </article>
+
+        <!-- PROYECTO 2 -->
+        <article class="work">
+          <h2>Encontrar a Shen</h2>
+
+          <p class="work-description">
+            Basado en la entrevista de 070 "Convertirse en leopardo para
+            entenderlo".
+          </p>
+
+          <a href="./encontrar_a_shen/index.html">
+            <div class="work-image" style="border-color: #829eff">
+              <img src="./assets/shen.png" alt="Encontrar a Shen" />
+            </div>
+          </a>
+
+          <div class="credits">
+            <p><strong>Diseño y desarrollo:</strong> Mariana Carrillo</p>
+            <p><strong>Composición sonora:</strong> Nombre del compositor</p>
+          </div>
+
+          <a class="visit" href="./encontrar_a_shen/index.html">
+        Jugar ↗
+          </a>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      2026 | <a href="https://artehum.uniandes.edu.co/">artehum</a> |
+      Universidad de los Andes
+    </footer>
+  </body>
+</html>
